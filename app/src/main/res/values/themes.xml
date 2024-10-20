@@ -2,6 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Agenda_EAM" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#028A0F</item> <!-- Vermelho, por exemplo -->
+        <item name="colorSecondaryVariant">#BCBCBC</item> <!-- Variante do vermelho -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 

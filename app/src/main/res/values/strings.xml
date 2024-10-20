@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Agenda_EAM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="spinner_items">spinner_items</string>
+
+    <string name="spinner_prompt">Prioridade</string>
+    <string-array name="priority_items">
+        <item>Alta</item>
+        <item>Média</item>
+        <item>Baixa</item>
+    </string-array>
+
 </resources>

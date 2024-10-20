@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimpleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!-- Caixa de Entrada de Dados -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#EFEFEF"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Compromisso"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/editDate"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="#D3D3D3"
+                android:focusable="false"
+                android:hint="  Data"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/editTime"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="#D3D3D3"
+                android:focusable="false"
+                android:hint="  Hora" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:background="#D3D3D3"
+            android:hint="  Descrição" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <Spinner
+                android:id="@+id/spinnerPrioridade"
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+                android:prompt="@string/spinner_prompt"
+                android:spinnerMode="dropdown" />
+
+
+            <Switch
+                android:id="@+id/switchNotificação"
+                android:layout_width="137dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="Notificação" />
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="OK" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
