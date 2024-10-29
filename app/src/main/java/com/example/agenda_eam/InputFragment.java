@@ -6,28 +6,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
 import androidx.fragment.app.Fragment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SimpleFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class SimpleFragment extends Fragment {
+public class InputFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     private String mParam1;
     private String mParam2;
 
-    public SimpleFragment() {
+    public InputFragment() {
         // Required empty public constructor
     }
 
-    public static SimpleFragment newInstance(String param1, String param2) {
-        SimpleFragment fragment = new SimpleFragment();
+    public static InputFragment newInstance(String param1, String param2) {
+        InputFragment fragment = new InputFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -45,20 +38,12 @@ public class SimpleFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_simple, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_input, container, false);
 
-        // Referência ao Spinner
         Spinner spinner = view.findViewById(R.id.spinnerPrioridade);
-
-        // Configurar o Adapter para o Spinner
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.prioridade_array, android.R.layout.simple_spinner_item);
-        // Especifica o layout a ser usado quando a lista de opções aparecer
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.prioridade_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Aplica o adapter ao Spinner
         spinner.setAdapter(adapter);
 
         return view;

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimpleFragment">
+    tools:context=".InputFragment">
 
     <!-- Caixa de Entrada de Dados -->
     <LinearLayout
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <EditText
+            <Button
                 android:id="@+id/editDate"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
@@ -36,11 +36,11 @@
                 android:background="#D3D3D3"
                 android:clickable="true"
                 android:focusable="false"
-                android:hint=" Data"
+                android:text=" Data"
                 android:onClick="intraDialogDatePicker"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <EditText
+            <Button
                 android:id="@+id/editTime"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
@@ -48,8 +48,9 @@
                 android:background="#D3D3D3"
                 android:clickable="true"
                 android:focusable="false"
-                android:hint=" Hora"
-                android:onClick="intraDialogTimePicker" />
+                android:text=" Hora"
+                android:onClick="intraDialogTimePicker"
+               />
         </LinearLayout>
 
         <EditText
@@ -68,18 +69,20 @@
 
             <Spinner
                 android:id="@+id/spinnerPrioridade"
-                android:layout_width="128dp"
+                android:layout_width="143dp"
                 android:layout_height="48dp"
-                android:prompt="@string/spinner_prompt"
-                android:spinnerMode="dropdown" />
+                android:prompt="@string/spinner_items"
+                android:spinnerMode="dropdown"
+                />
 
             <Switch
                 android:id="@+id/switchNotificação"
-                android:layout_width="151dp"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:text="Notificação" />
+                android:text="Notificação"
+                />
 
             <Button
                 android:id="@+id/btnOk"

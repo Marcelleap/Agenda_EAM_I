@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".OutputFragment">
 
     <LinearLayout
@@ -12,7 +11,6 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <!-- TabLayout para as abas HOJE e OUTRA DATA -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
@@ -30,18 +28,26 @@
                 android:id="@+id/tabOutraData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OUTRA DATA"
-                android:onClick="intraDialogDatePicker"/>
+                android:text="AMANHÃ" />
         </com.google.android.material.tabs.TabLayout>
 
-        <!-- RecyclerView para exibir a lista de compromissos -->
+        <!-- Botão para selecionar outra data -->
+        <Button
+            android:id="@+id/editTextDateSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SELECIONE OUTRA DATA"
+            android:padding="8dp"
+            android:onClick="intraDialogDatePicker"
+            tools:ignore="TouchTargetSizeCheck"
+            android:layout_marginTop="8dp" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewCompromissos"
             android:layout_width="match_parent"
-            android:layout_height="766dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="8dp"
             android:scrollbars="vertical" />
     </LinearLayout>
-
 </FrameLayout>
