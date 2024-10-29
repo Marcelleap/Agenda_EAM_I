@@ -24,6 +24,8 @@ public class LibrariesForLibs extends AbstractExternalDependencyFactory {
     private final AbstractExternalDependencyFactory owner = this;
     private final EspressoLibraryAccessors laccForEspressoLibraryAccessors = new EspressoLibraryAccessors(owner);
     private final ExtLibraryAccessors laccForExtLibraryAccessors = new ExtLibraryAccessors(owner);
+    private final LegacyLibraryAccessors laccForLegacyLibraryAccessors = new LegacyLibraryAccessors(owner);
+    private final PlayLibraryAccessors laccForPlayLibraryAccessors = new PlayLibraryAccessors(owner);
     private final VersionAccessors vaccForVersionAccessors = new VersionAccessors(providers, config);
     private final BundleAccessors baccForBundleAccessors = new BundleAccessors(objects, providers, config, attributesFactory, capabilityNotationParser);
     private final PluginAccessors paccForPluginAccessors = new PluginAccessors(providers, config);
@@ -64,6 +66,16 @@ public class LibrariesForLibs extends AbstractExternalDependencyFactory {
     }
 
     /**
+     * Dependency provider for <b>gridlayout</b> with <b>androidx.gridlayout:gridlayout</b> coordinates and
+     * with version reference <b>gridlayout</b>
+     * <p>
+     * This dependency was declared in catalog libs.versions.toml
+     */
+    public Provider<MinimalExternalModuleDependency> getGridlayout() {
+        return create("gridlayout");
+    }
+
+    /**
      * Dependency provider for <b>junit</b> with <b>junit:junit</b> coordinates and
      * with version reference <b>junit</b>
      * <p>
@@ -95,6 +107,20 @@ public class LibrariesForLibs extends AbstractExternalDependencyFactory {
      */
     public ExtLibraryAccessors getExt() {
         return laccForExtLibraryAccessors;
+    }
+
+    /**
+     * Group of libraries at <b>legacy</b>
+     */
+    public LegacyLibraryAccessors getLegacy() {
+        return laccForLegacyLibraryAccessors;
+    }
+
+    /**
+     * Group of libraries at <b>play</b>
+     */
+    public PlayLibraryAccessors getPlay() {
+        return laccForPlayLibraryAccessors;
     }
 
     /**
@@ -146,6 +172,66 @@ public class LibrariesForLibs extends AbstractExternalDependencyFactory {
          */
         public Provider<MinimalExternalModuleDependency> getJunit() {
             return create("ext.junit");
+        }
+
+    }
+
+    public static class LegacyLibraryAccessors extends SubDependencyFactory {
+        private final LegacySupportLibraryAccessors laccForLegacySupportLibraryAccessors = new LegacySupportLibraryAccessors(owner);
+
+        public LegacyLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Group of libraries at <b>legacy.support</b>
+         */
+        public LegacySupportLibraryAccessors getSupport() {
+            return laccForLegacySupportLibraryAccessors;
+        }
+
+    }
+
+    public static class LegacySupportLibraryAccessors extends SubDependencyFactory {
+
+        public LegacySupportLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Dependency provider for <b>v4</b> with <b>androidx.legacy:legacy-support-v4</b> coordinates and
+         * with version reference <b>legacySupportV4</b>
+         * <p>
+         * This dependency was declared in catalog libs.versions.toml
+         */
+        public Provider<MinimalExternalModuleDependency> getV4() {
+            return create("legacy.support.v4");
+        }
+
+    }
+
+    public static class PlayLibraryAccessors extends SubDependencyFactory {
+        private final PlayServicesLibraryAccessors laccForPlayServicesLibraryAccessors = new PlayServicesLibraryAccessors(owner);
+
+        public PlayLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Group of libraries at <b>play.services</b>
+         */
+        public PlayServicesLibraryAccessors getServices() {
+            return laccForPlayServicesLibraryAccessors;
+        }
+
+    }
+
+    public static class PlayServicesLibraryAccessors extends SubDependencyFactory {
+
+        public PlayServicesLibraryAccessors(AbstractExternalDependencyFactory owner) { super(owner); }
+
+        /**
+         * Dependency provider for <b>maps</b> with <b>com.google.android.gms:play-services-maps</b> coordinates and
+         * with version reference <b>playServicesMaps</b>
+         * <p>
+         * This dependency was declared in catalog libs.versions.toml
+         */
+        public Provider<MinimalExternalModuleDependency> getMaps() {
+            return create("play.services.maps");
         }
 
     }
@@ -205,6 +291,16 @@ public class LibrariesForLibs extends AbstractExternalDependencyFactory {
         public Provider<String> getEspressoCore() { return getVersion("espressoCore"); }
 
         /**
+         * Version alias <b>gridlayout</b> with value <b>1.0.0</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getGridlayout() { return getVersion("gridlayout"); }
+
+        /**
          * Version alias <b>junit</b> with value <b>4.13.2</b>
          * <p>
          * If the version is a rich version and cannot be represented as a
@@ -225,6 +321,16 @@ public class LibrariesForLibs extends AbstractExternalDependencyFactory {
         public Provider<String> getJunitVersion() { return getVersion("junitVersion"); }
 
         /**
+         * Version alias <b>legacySupportV4</b> with value <b>1.0.0</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getLegacySupportV4() { return getVersion("legacySupportV4"); }
+
+        /**
          * Version alias <b>material</b> with value <b>1.10.0</b>
          * <p>
          * If the version is a rich version and cannot be represented as a
@@ -233,6 +339,16 @@ public class LibrariesForLibs extends AbstractExternalDependencyFactory {
          * This version was declared in catalog libs.versions.toml
          */
         public Provider<String> getMaterial() { return getVersion("material"); }
+
+        /**
+         * Version alias <b>playServicesMaps</b> with value <b>19.0.0</b>
+         * <p>
+         * If the version is a rich version and cannot be represented as a
+         * single version string, an empty string is returned.
+         * <p>
+         * This version was declared in catalog libs.versions.toml
+         */
+        public Provider<String> getPlayServicesMaps() { return getVersion("playServicesMaps"); }
 
     }
 
