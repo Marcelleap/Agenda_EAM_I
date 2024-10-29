@@ -30,7 +30,8 @@
                 android:id="@+id/tabOutraData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OUTRA DATA" />
+                android:text="OUTRA DATA"
+                android:onClick="intraDialogDatePicker"/>
         </com.google.android.material.tabs.TabLayout>
 
         <!-- RecyclerView para exibir a lista de compromissos -->

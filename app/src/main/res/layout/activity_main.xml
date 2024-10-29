@@ -7,7 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
 
+        <fragment
+            android:id="@+id/simple_fragment"
+            android:name="com.example.agenda_eam.SimpleFragment"
+            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
+        <fragment
+            android:id="@+id/output_fragment"
+            android:name="com.example.agenda_eam.OutputFragment"
+            android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
