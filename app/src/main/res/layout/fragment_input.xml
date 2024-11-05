@@ -28,7 +28,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/editDate"
+                android:id="@+id/cld_Data"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="10dp"
@@ -41,7 +41,7 @@
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
-                android:id="@+id/editTime"
+                android:id="@+id/cld_Hora"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
@@ -54,7 +54,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editDescription"
+            android:id="@+id/txtDescricao"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
@@ -76,7 +76,7 @@
                 />
 
             <Switch
-                android:id="@+id/switchNotificação"
+                android:id="@+id/switchNotificacao"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginStart="10dp"
@@ -85,7 +85,7 @@
                 />
 
             <Button
-                android:id="@+id/btnOk"
+                android:id="@+id/btn_Ok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OK" />

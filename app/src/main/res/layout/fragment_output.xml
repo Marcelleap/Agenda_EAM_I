@@ -12,7 +12,7 @@
         android:padding="8dp">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
+            android:id="@+id/tab_HojeOuta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="fill"
@@ -28,22 +28,22 @@
                 android:id="@+id/tabOutraData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AMANHÃ" />
+                android:text="OUTRA DATA" />
         </com.google.android.material.tabs.TabLayout>
 
         <!-- Botão para selecionar outra data -->
         <Button
-            android:id="@+id/editTextDateSearch"
+            android:id="@+id/btn_OutraData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SELECIONE OUTRA DATA"
-            android:padding="8dp"
+            android:layout_marginTop="8dp"
             android:onClick="intraDialogDatePicker"
-            tools:ignore="TouchTargetSizeCheck"
-            android:layout_marginTop="8dp" />
+            android:padding="8dp"
+            android:text="SELECIONE OUTRA DATA"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewCompromissos"
+            android:id="@+id/list_Compromisso"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"

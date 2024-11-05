@@ -11,7 +11,7 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    private List<String> compromissos;
+    private final List<String> compromissos;
 
     public RecyclerAdapter(List<String> compromissos) {
         this.compromissos = compromissos;
@@ -36,16 +36,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return compromissos.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView txtCompromisso;
         public Button btnEditar;
         public Button btnExcluir;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txtCompromisso = itemView.findViewById(R.id.txtCompromisso);
-            btnEditar = itemView.findViewById(R.id.btnEditar);
-            btnExcluir = itemView.findViewById(R.id.btnExcluir);
+            txtCompromisso = itemView.findViewById(R.id.txt_Compromisso);
+            btnEditar = itemView.findViewById(R.id.btn_Editar);
+            btnExcluir = itemView.findViewById(R.id.btn_Excluir);
         }
     }
 }

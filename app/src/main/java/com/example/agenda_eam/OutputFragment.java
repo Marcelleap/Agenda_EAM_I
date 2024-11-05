@@ -43,7 +43,7 @@ public class OutputFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_output, container, false);
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewCompromissos);
+        RecyclerView recyclerView = view.findViewById(R.id.list_Compromisso);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<String> compromissos = new ArrayList<>();
