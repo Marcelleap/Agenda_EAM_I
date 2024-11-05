@@ -15,7 +15,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/txtCompromisso"
+            android:id="@+id/txt_Compromisso"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
@@ -25,7 +25,7 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/btnEditar"
+            android:id="@+id/btn_Editar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -36,7 +36,7 @@
             android:textColor="#006064" />
 
         <Button
-            android:id="@+id/btnExcluir"
+            android:id="@+id/btn_Excluir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
