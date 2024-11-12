@@ -1,35 +1,72 @@
-# Agenda
-## Descrição
+# **App V3 Agenda**
 
-Este é um aplicativo Android simples de Agenda desenvolvido para a disciplina de EAM I. O objetivo do projeto é criar um gerenciador de eventos pessoais, permitindo que o usuário adicione, edite, remova e visualize seus compromissos e eventos. O projeto é desenvolvido utilizando **Java** e a **plataforma Android**.
+Este é um aplicativo Android desenvolvido para gerenciar compromissos, exibindo e armazenando informações em um banco de dados SQLite. A aplicação permite adicionar, visualizar e remover compromissos, além de incluir personalizações de interface, como botões com bordas arredondadas.
 
-## Funcionalidades
+## **Funcionalidades**
+- **Adicionar Compromissos**: Insira compromissos com descrição, data e hora.
+- **Visualizar Compromissos**:
+  - Exiba compromissos do dia atual automaticamente ao abrir o aplicativo.
+  - Selecione uma data específica para visualizar compromissos relacionados.
+  - Liste todos os compromissos armazenados.
+- **Excluir Compromissos**: Limpe o banco de dados para remover todos os registros.
+- **Interface Personalizada**:
+  - Botões e layouts com bordas arredondadas para uma experiência visual agradável.
+- **Armazenamento Local**:
+  - Persistência de dados com SQLite.
 
-- Adicionar eventos com informações como data, hora, descrição, prioridade e notificação.
-- Atualizar eventos já cadastrados.
-- Excluir eventos da agenda.
-- Visualizar a lista de eventos agendados.
-- Notificações para eventos importantes.
+## **Requisitos**
+- Android Studio 2024.1.2 ou superior.
+- Gradle 8.0 ou superior.
+- SDK mínimo: 24 (Android 7.0 Nougat).
+- Dependências:
+  - Biblioteca Material Components (`com.google.android.material:material:1.9.0`).
 
-## Estrutura do Projeto
+## **Instalação**
+1. Clone o repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
 
-A estrutura do projeto é composta por uma classe principal chamada `Agenda`, que contém métodos para gerenciar a lista de eventos, e uma classe `Event` que define a estrutura de um evento. O projeto inclui as seguintes funcionalidades principais:
+  2. Instale as dependências necessárias (Gradle).
+3. Conecte um dispositivo ou emulador Android.
+4. Compile e execute o aplicativo.
 
-### Classes
-
-- **Agenda.java**
-  - `createEvent()`: Cria um novo evento.
-  - `removeEvent()`: Remove um evento existente.
-  - `updateEvent()`: Atualiza um evento existente.
-  - `getEvent()`: Obtém um evento específico por índice.
-  - `readEvents()`: Retorna todos os eventos cadastrados.
+## **Estrutura do Projeto**
+- **`MainActivity`**: 
+  - Activity principal que gerencia a navegação entre fragments.
   
-- **Event.java**
-  - Contém os detalhes de um evento (data, hora, descrição, prioridade e notificação).
+- **`VisualizacaoFragment`**:
+  - Exibe compromissos do dia atual ao iniciar.
+  - Permite selecionar outras datas para exibição de compromissos.
   
-## Como Executar o Projeto
+- **`CompromissosDB`**:
+  - Classe para gerenciar o banco de dados SQLite.
+  - Métodos principais:
+    - `adicionarCompromisso()`: Insere um compromisso no banco.
+    - `buscarCompromissosPorData()`: Retorna compromissos de uma data específica.
+    - `buscarTodosCompromissos()`: Retorna todos os compromissos.
+    - `limparBancoDeDados()`: Remove todos os registros do banco.
+  
+- **`Drawable` (Recursos)**:
+  - Arquivos XML personalizados em `res/drawable/` para botões e layouts com bordas arredondadas.
 
-### Pré-requisitos
+## **Uso**
+### **Adicionar Compromissos**:
+- Insira uma descrição, selecione uma data e hora, e clique para salvar.
 
-- Android Studio instalado.
-- Conhecimento básico de desenvolvimento Android usando Java.
+### **Visualizar Compromissos**:
+- Ao abrir o aplicativo, os compromissos do dia atual serão exibidos.
+- Use o botão "Outra Data" para selecionar um dia específico.
+
+### **Limpar Banco de Dados**:
+- Clique no botão "Limpar" para remover todos os compromissos armazenados.
+
+## **Capturas de Tela**
+
+### **Tela Inicial**
+<img src="https://github.com/user-attachments/assets/450f5d48-8e1b-42a6-b446-c3814687d1bf" alt="Tela Inicial" width="300">
+
+### **Visualização de Compromissos**
+<img src="https://github.com/user-attachments/assets/1be020be-3dc3-4648-9588-7a42d88a75b9" alt="Visualização de Compromissos" width="300">
+
+### **Adicionar Compromissos**
+<img src="https://github.com/user-attachments/assets/33baca06-9510-47d7-977e-028a05a8d190" alt="Adicionar Compromissos" width="300">
