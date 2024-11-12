@@ -6,9 +6,9 @@
     </style>
 
     <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:backgroundTint">#FF6200EE</item> <!-- Cor de fundo do botão -->
-        <item name="android:textColor">#FFFFFF</item> <!-- Cor do texto -->
-        <item name="android:padding">8dp</item> <!-- Espaçamento interno -->
+        <item name="android:backgroundTint">#B2FF59</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">8dp</item>
     </style>
 
     <style name="Theme.Agenda_EAM" parent="Base.Theme.Agenda_EAM" />

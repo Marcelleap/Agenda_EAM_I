@@ -9,7 +9,7 @@ public class Compromisso {
     private String descricao;
 
     // Construtor
-    public Compromisso(Calendar dataHora, String descricao, String hora) {
+    public Compromisso(Calendar dataHora, String descricao) {
         this.dataHora = dataHora;
         this.descricao = descricao;
     }
@@ -40,5 +40,16 @@ public class Compromisso {
         return new SimpleDateFormat("HH:mm", Locale.getDefault()).format(dataHora.getTime());
     }
 
-
+    public void setHora(String hora) {
+        try {
+            String[] partesHora = hora.split(":");
+            int horaInt = Integer.parseInt(partesHora[0]);
+            int minutoInt = Integer.parseInt(partesHora[1]);
+            this.dataHora.set(Calendar.HOUR_OF_DAY, horaInt);
+            this.dataHora.set(Calendar.MINUTE, minutoInt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
+
