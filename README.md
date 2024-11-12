@@ -2,6 +2,21 @@
 
 Este é um aplicativo Android desenvolvido para gerenciar compromissos, exibindo e armazenando informações em um banco de dados SQLite. A aplicação permite adicionar, visualizar e remover compromissos, além de incluir personalizações de interface, como botões com bordas arredondadas.
 
+## Autores
+
+- [João Henrique](https://github.com/joao4xz)
+- [Marcelle Andrade](https://github.com/Marcelleap)
+- [Vinicius Corrêa de Assis](https://github.com/viniciuscoassis)
+
+## Informações referênciais 
+
+- Disciplina: Engenharia de Aplicações Móveis
+- Curso: Ciência da Computação - Campus Poços de Caldas - PPC - Noite - 2024/2
+- Instituição: Pontifícia Universidade Católica de Minas Gerais - PUC Minas
+- Professor: Udo Fritzke Junior
+- Código da Disciplina: 5326.1.00
+- Formato: Graduação Presencial Síncrona - 2024/2
+
 ## **Funcionalidades**
 - **Adicionar Compromissos**: Insira compromissos com descrição, data e hora.
 - **Visualizar Compromissos**:
