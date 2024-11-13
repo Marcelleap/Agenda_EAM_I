@@ -1,4 +1,4 @@
-# **App V3 Agenda**
+# **App Agenda**
 
 Este é um aplicativo Android desenvolvido para gerenciar compromissos, exibindo e armazenando informações em um banco de dados SQLite. A aplicação permite adicionar, visualizar e remover compromissos, além de incluir personalizações de interface, como botões com bordas arredondadas.
 
